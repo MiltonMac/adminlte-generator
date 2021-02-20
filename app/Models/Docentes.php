@@ -61,11 +61,11 @@ class Docentes extends Model
      * @var array
      */
     public static $rules = [
-        'cedula' => 'required|min:10|max:10|numeric',
+        'cedula' => 'required|min:10|numeric',
         'nombre' => 'required|max:20',
         'apellido' => 'required|max:20',
         'correo' => 'required|max:50',
-        'celular' => 'required|min:10|max:10|numeric'
+        'celular' => 'required|min:10|numeric'
     ];
 
     

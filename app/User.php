@@ -42,6 +42,12 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public static $rules = [
+        'name' => 'required',
+        'email' => 'required|email',
+        'password' => 'required|min:8',        
+    ];
+
     public static $updateRules = [
         'name' => 'required',
         'email' => 'required|email',
