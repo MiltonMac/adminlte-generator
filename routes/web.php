@@ -25,5 +25,13 @@ Route::get('/home', [
     HomeController::class, 'index'
 ])->name('home');
 
+Route::group(['middleware' => ['permission:view_docentes|edit_docentes|create_docentes']], function(){
+    Route::resource('docentes', App\Http\Controllers\DocentesController::class);
+});
 
-Route::resource('docentes', App\Http\Controllers\DocentesController::class);
+
+ 
+
+Route::resource('users', App\Http\Controllers\UserController::class);
+
+Route::resource('roles', App\Http\Controllers\RoleController::class);
